@@ -1,0 +1,7 @@
+self.addEventListener("install", e => {
+  e.waitUntil(
+    caches.open("calc").then(cache => {
+      return cache.addAll(["./"]);
+    })
+  );
+});
